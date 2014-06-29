@@ -20,7 +20,7 @@ server.route({
 		if (host.match(regex)) {
 			uri.host = host.replace(regex, '');
 			console.log(request.headers);
-			reply.redirect(url.format(uri));
+			reply.redirect(url.format(uri)).code(301);
 		} else {
 			reply('This is not what you are probably looking for.');
 		}
