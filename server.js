@@ -1,6 +1,6 @@
 var url = require('url');
 var hapi = require('hapi');
-var server = new hapi.Server('0.0.0.0', Number(process.argv[2] || 8000));
+var server = new hapi.Server('0.0.0.0', Number(process.env.PORT || process.argv[2] || 8000));
 
 server.route({
 	path: '/',
