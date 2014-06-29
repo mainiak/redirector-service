@@ -1,6 +1,5 @@
-FROM debian:wheezy
+FROM mainiak/node:0.10.29
 
-ADD node-bin /opt/node
 ADD server.js /webapp/server.js
 ADD package.json /webapp/package.json
 
